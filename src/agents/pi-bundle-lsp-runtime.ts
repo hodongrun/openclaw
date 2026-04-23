@@ -327,6 +327,7 @@ export async function createBundleLspToolRuntime(params: {
           stdio: ["pipe", "pipe", "pipe"],
           env: { ...process.env, ...launchConfig.env },
           cwd: launchConfig.cwd,
+          windowsHide: true,
         });
 
         const session: LspSession = {

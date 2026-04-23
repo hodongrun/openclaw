@@ -147,6 +147,7 @@ export async function runPinnedPathHelper(params: {
     ["-c", LOCAL_PINNED_PATH_PYTHON, params.operation, params.rootPath, params.relativePath],
     {
       stdio: ["ignore", "ignore", "pipe"],
+      windowsHide: true,
     },
   );
 
